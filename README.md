@@ -11,7 +11,7 @@ In our app, we have three main functions. The UI style is in a sharp and hale st
 ## Project Overview
 https://github.com/deco3500-2018/Sharelock/wiki/Design-Process-Overview
 ## Teammembers
-Shahzaib Ali
-Huanmin Fu
-Wanning Tian
-Peiquan Li
+Shahzaib Ali  
+Huanmin Fu  
+Wanning Tian  
+Peiquan Li  
