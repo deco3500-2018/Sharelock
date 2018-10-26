@@ -1,0 +1,4 @@
+We use MySQL database to store users’ basic information and use PHP to pull out data from MySQL and show them at the web page. The information include name, phone number, professional skills, availability status etc.  
+Database and live search access needs to build a localhost environment
+Database Name: test1
+$connect = mysqli_connect("localhost", "root", "root", "test1");
