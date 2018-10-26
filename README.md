@@ -13,6 +13,11 @@ https://github.com/deco3500-2018/Sharelock/wiki/Prototype-2-Mid-Fi
 https://github.com/deco3500-2018/Sharelock/wiki/Prototype-3-High-Fi  
 ### User Test & Prototype Evaluation
 https://github.com/deco3500-2018/Sharelock/wiki/User-Test-&-Prototype-Evaluation  
+### Database and Web developing
+https://github.com/deco3500-2018/Sharelock/blob/master/Live%20Search%20Introduction  
+https://github.com/deco3500-2018/Sharelock/blob/master/tbl_customer.sql  
+https://github.com/deco3500-2018/Sharelock/blob/master/index.php  
+https://github.com/deco3500-2018/Sharelock/blob/master/fetch.php  
 
 ### Product Link
 https://marvelapp.com/a2a6g3e  
