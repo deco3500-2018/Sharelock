@@ -1,0 +1,119 @@
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+  
+  * {box-sizing: border-box;}
+.header {
+  overflow: hidden;
+  background-color: #d40053;
+  padding: 10px 5px;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+
+  .header-right {
+    float: right;
+  }
+}
+
+</style>
+<script type="text/javascript"
+  src=
+"http://maps.googleapis.com/maps/api/js?key=AIzaSyDJW4jsPlNKgv6jFm3B5Edp5ywgdqLWdmc&sensor=false">
+</script>
+<script type="text/javascript">
+
+var locations = [
+  ['<b><a href="http://edgeqld.org.au/">'+
+            'The Edge Makerspace</a> </b>', -27.473480,153.019790, ''],
+  ['<b><a href="https://hsbne.org/">'+
+            'Hackerspace Brisbane</a></b> ', -27.434860,153.098587, ''],
+
+  ['<b><a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'Fishburners Brisbane Coworking Space</a> </b>', -27.4605252,153.0055471, ''],
+  ['<b><a href="https://arc.space/">'+
+            'Arc Hardware Incubator</a></b> ', -27.455811,153.032104, '']  
+						
+  ];
+
+  function initialize() {
+
+    var myOptions = {
+      center: new google.maps.LatLng(-27.463018, 153.019817),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    };
+    var map = new google.maps.Map(document.getElementById("default"),
+        myOptions);
+
+    setMarkers(map,locations)
+
+  }
+
+
+
+  function setMarkers(map,locations){
+
+      var marker, i
+
+for (i = 0; i < locations.length; i++)
+ {  
+
+ var loan = locations[i][0]
+ var lat = locations[i][1]
+ var long = locations[i][2]
+ var add =  locations[i][3]
+
+ latlngset = new google.maps.LatLng(lat, long);
+
+  var marker = new google.maps.Marker({  
+          map: map, title: loan , position: latlngset  
+        });
+        map.setCenter(marker.getPosition())
+
+
+        var content = 
+		
+		'<p>Place detials</p> '+ 	
+	    loan +
+		'<p><a href="https://goo.gl/forms/f95NARNSRhGwj6Uv1">'+
+            'Book Now</a> ' + 		
+		add   	
+		
+  var infowindow = new google.maps.InfoWindow()
+
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
+
+  }
+  }
+
+
+
+  </script>
+ </head>
+ <body onload="initialize()">
+ <div class="header">
+<a href="https://hsbne.org/"><img src="header_back.PNG" ></a>
+<div class="header-right">
+<a href="https://hsbne.org/"><img src="header_profile.PNG"></a>
+</div>
+</div>
+
+  <div id="default" style="width:100%; height:100%"></div>
+ </body>
+  </html>
